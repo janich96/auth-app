@@ -9,7 +9,7 @@ function App() {
 
   function fetchAuth(credentials) {
     return (
-      fetch(('http://localgost:3000'), {
+      fetch(('http://localhost:3000'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -22,7 +22,13 @@ function App() {
   }
 
   function validateForm() {
+
+    if (userEmail === undefined) {
+      return;
+    }
+
     const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+    
     if (userEmail.match(EMAIL_REGEXP)) {
       emailRef.current.style.border = '2px solid green';
     } else {

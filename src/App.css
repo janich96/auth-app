@@ -61,6 +61,7 @@
               0px 20px 40px -20px rgba(0, 0, 0, 0.3) inset;
   width: 300px;
   font-size: 20px;
+  -webkit-appearance: none;
 }
 
 .form input[type="password"] {
@@ -110,5 +111,9 @@ input:focus, button:focus {
     width: 30px;
     height: 30px;
     font-size: 10px;
+  }
+
+  .form button:hover {
+    padding: 4px;
   }
 }
