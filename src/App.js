@@ -22,8 +22,8 @@ function App() {
   }
 
   function validateForm() {
-    const emailRegExp = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-    if (userEmail.match(emailRegExp)) {
+    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+    if (userEmail.match(EMAIL_REGEXP)) {
       emailRef.current.style.border = '2px solid green';
     } else {
       emailRef.current.style.border = '2px solid red';
