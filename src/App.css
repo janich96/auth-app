@@ -1,24 +1,114 @@
-.App {
+@font-face {
+  font-weight: 400;
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Light.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: Roboto;
+  color: #fff;
+}
+
+.app-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom right, #642b73, #000);
+  height: 100vh;
+  width: 100vw;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.form {
+  display: flex;
   text-align: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px #000, 
+            -20px -20px 60px #642b73;
+  padding: 40px 20px 10px 20px;
+  background: transparent;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.form input {
+  margin: 10px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 10px 50px -10px rgba(204, 0, 255, 0.3) inset, 
+              0px 20px 40px -20px rgba(0, 0, 0, 0.3) inset;
+  width: 300px;
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.form input[type="password"] {
+  font-family: Verdana;
 }
 
-.App-intro {
-  font-size: large;
+.form input::placeholder {
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.form button {
+  border: none;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  background-color: #5e0275;
+  align-self: end;
+  margin: 20px 10px;
+  transition: 0.3s;
+  box-shadow: 0px 0px 30px -20px rgba(100, 43, 115, 0.25) inset, 
+              0px 30px 30px -10px rgba(0, 0, 0, 0.3) inset;
+}
+
+.form button:hover {
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.form button:active {
+  transform: translateY(3px);
+}
+
+input:focus, button:focus {
+  border: 2px solid #fff;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 20px;
+  }
+  .form input {
+    width: 200px;
+    font-size: 14px;
+  }
+
+  .form button {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
 }
