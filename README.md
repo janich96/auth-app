@@ -1,3 +1,3 @@
 ## App auth
 
-Authentication app made by React.js.
+Deployed on https://stackblitz-starters-mcvwcg.stackblitz.io/
